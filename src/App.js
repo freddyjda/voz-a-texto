@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 const App = () => {
+  
   const [isListening, setIsListening] = useState(false);
   const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+
+ 
+
 
   if (!browserSupportsSpeechRecognition) {
     return <div>Tu navegador no soporta Web Speech API.</div>;
@@ -21,6 +25,8 @@ const App = () => {
     SpeechRecognition.stopListening();
     setIsListening(false);
   };
+
+  
 
   return (
     <div style={{ padding: '20px' }}>
