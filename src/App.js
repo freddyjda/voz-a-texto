@@ -10,7 +10,10 @@ const App = () => {
   }
 
   const startListening = () => {
-    SpeechRecognition.startListening({ language: 'es-ES' });
+    SpeechRecognition.startListening({ 
+      language: 'es-ES',
+      continuous: true // Esto mantiene la escucha activa
+    });
     setIsListening(true);
   };
 
