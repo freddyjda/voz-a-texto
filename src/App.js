@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import './App.css'; // Importa el archivo CSS
+
 
 const App = () => {
   
@@ -15,8 +17,10 @@ const App = () => {
 
   const startListening = () => {
     SpeechRecognition.startListening({ 
-      language: 'es-ES',
-      continuous: true // Esto mantiene la escucha activa
+      language: 'en-US',
+      continuous: true, // Esto mantiene la escucha activa
+      interimResults: false,
+      
     });
     setIsListening(true);
   };
