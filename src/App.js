@@ -17,7 +17,7 @@ const App = () => {
 
   const startListening = () => {
     SpeechRecognition.startListening({ 
-      language: 'es-ES',
+      language: 'zh-CN',
       continuous: true, // Esto mantiene la escucha activa
       interimResults: false,
       
