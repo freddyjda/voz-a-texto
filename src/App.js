@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Transcripción de Audio chino, mamlo alingerth</h1>
+      <h1>Transcripción de Audio</h1>
       <button onClick={isListening ? stopListening : startListening}>
         {isListening ? 'Detener' : 'Empezar'}
       </button>
